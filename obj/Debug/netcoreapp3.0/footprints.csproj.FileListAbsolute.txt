@@ -16,3 +16,17 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.RazorTargetAssemblyInfo.cache
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.pdb
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Remotion.Linq.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/System.Data.SqlClient.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/System.Interactive.Async.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/runtimes/win-arm64/native/sni.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/runtimes/win-x64/native/sni.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/runtimes/win-x86/native/sni.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.csproj.CopyComplete
