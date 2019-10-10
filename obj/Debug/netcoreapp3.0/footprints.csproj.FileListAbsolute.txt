@@ -42,3 +42,4 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/appsettings.json
