@@ -6,8 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using footprints.Data;
 using Microsoft.EntityFrameworkCore;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace footprints.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase

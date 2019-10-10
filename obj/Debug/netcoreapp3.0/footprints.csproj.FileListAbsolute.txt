@@ -40,3 +40,6 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Tokens.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
