@@ -35,3 +35,8 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.csproj.CopyComplete
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Debug/netcoreapp3.0/footprints.pdb
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Logging.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Tokens.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/System.IdentityModel.Tokens.Jwt.dll
