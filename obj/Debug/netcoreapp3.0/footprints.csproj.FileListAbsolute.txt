@@ -1,5 +1,4 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/appsettings.Development.json
-/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/appsettings.json
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Properties/launchSettings.json
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/footprints
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/footprints.deps.json
