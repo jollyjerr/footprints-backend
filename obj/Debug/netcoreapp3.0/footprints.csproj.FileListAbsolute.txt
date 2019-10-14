@@ -48,3 +48,5 @@
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.Bot.Schema.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 /Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.Rest.ClientRuntime.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll
+/Users/JollyJerr/Development/code/projects/mod5/footprints/bin/Debug/netcoreapp3.0/Microsoft.Bot.Configuration.dll

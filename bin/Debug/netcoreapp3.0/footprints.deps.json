@@ -25,7 +25,7 @@
       "footprints/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.2.0",
-          "Microsoft.Bot.Builder": "4.5.3",
+          "Microsoft.Bot.Builder.Integration.AspNet.Core": "4.6.0-preview1",
           "Microsoft.EntityFrameworkCore.Design": "3.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0",
           "System.IdentityModel.Tokens.Jwt": "5.4.0",
@@ -421,25 +421,60 @@
           "System.Text.Encodings.Web": "4.5.0"
         }
       },
-      "Microsoft.Bot.Builder/4.5.3": {
+      "Microsoft.Bot.Builder/4.6.0-preview1": {
         "dependencies": {
-          "Microsoft.Bot.Connector": "4.5.3",
+          "Microsoft.Bot.Connector": "4.6.0-preview1",
           "Microsoft.Extensions.Logging": "3.0.0",
           "SourceLink.Create.CommandLine": "2.8.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bot.Builder.dll": {
-            "assemblyVersion": "4.5.3.0",
-            "fileVersion": "4.5.3.0"
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Bot.Builder.dll": {}
         }
       },
-      "Microsoft.Bot.Connector/4.5.3": {
+      "Microsoft.Bot.Builder.Integration.AspNet.Core/4.6.0-preview1": {
         "dependencies": {
-          "Microsoft.Bot.Schema": "4.5.3",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
+          "Microsoft.Bot.Builder": "4.6.0-preview1",
+          "Microsoft.Bot.Configuration": "4.6.0-preview1",
+          "Microsoft.Net.Http.Headers": "2.2.0",
+          "Newtonsoft.Json": "10.0.3",
+          "SourceLink.Create.CommandLine": "2.8.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll": {}
+        }
+      },
+      "Microsoft.Bot.Configuration/4.6.0-preview1": {
+        "dependencies": {
+          "Newtonsoft.Json": "10.0.3",
+          "SourceLink.Create.CommandLine": "2.8.3",
+          "System.Threading.Tasks.Extensions": "4.5.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bot.Configuration.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Bot.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Bot.Connector/4.6.0-preview1": {
+        "dependencies": {
+          "Microsoft.Bot.Schema": "4.6.0-preview1",
           "Microsoft.Extensions.Logging": "3.0.0",
           "Microsoft.IdentityModel.Clients.ActiveDirectory": "5.1.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.3.0",
@@ -449,23 +484,23 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bot.Connector.dll": {
-            "assemblyVersion": "4.5.3.0",
-            "fileVersion": "4.5.3.0"
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Bot.Connector.dll": {}
         }
       },
-      "Microsoft.Bot.Schema/4.5.3": {
+      "Microsoft.Bot.Schema/4.6.0-preview1": {
         "dependencies": {
           "Newtonsoft.Json": "10.0.3",
           "SourceLink.Create.CommandLine": "2.8.3"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bot.Schema.dll": {
-            "assemblyVersion": "4.5.3.0",
-            "fileVersion": "4.5.3.0"
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
           }
         },
         "compile": {
@@ -3635,26 +3670,40 @@
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
     },
-    "Microsoft.Bot.Builder/4.5.3": {
+    "Microsoft.Bot.Builder/4.6.0-preview1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WVwQzpbOLRF7HJlVgR/FHnB1ptlSdCtwXLBAOa/tng/7Zc53n6Vw2q4j5s9Y4sy5ZDv1CBC6FbreVjFVHkZkOA==",
-      "path": "microsoft.bot.builder/4.5.3",
-      "hashPath": "microsoft.bot.builder.4.5.3.nupkg.sha512"
+      "sha512": "sha512-MDE0s3qJJ2JMn00Wgwn/oY9AZzvGVVx3lK+QadruvajYS29KSqKrXD5jvSsWAQYl18tpi4QIxP1YPkysIfJy8A==",
+      "path": "microsoft.bot.builder/4.6.0-preview1",
+      "hashPath": "microsoft.bot.builder.4.6.0-preview1.nupkg.sha512"
     },
-    "Microsoft.Bot.Connector/4.5.3": {
+    "Microsoft.Bot.Builder.Integration.AspNet.Core/4.6.0-preview1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iKRZkgzJ48XX9nky1+ikmEN2NHlPYWi5k0DgGJ/VVGwvco3Mj7TcFRF3iNWImfwCUoDMqWwzS5OKnkMHccrVRA==",
-      "path": "microsoft.bot.connector/4.5.3",
-      "hashPath": "microsoft.bot.connector.4.5.3.nupkg.sha512"
+      "sha512": "sha512-QRTZARfjTvatlG2lngTmW6IuwXBua4NTkz6ta9KXsZN4luPscBp/vnaxpghYQZiVqS+QFwZGHUYvIbEw3njYyg==",
+      "path": "microsoft.bot.builder.integration.aspnet.core/4.6.0-preview1",
+      "hashPath": "microsoft.bot.builder.integration.aspnet.core.4.6.0-preview1.nupkg.sha512"
     },
-    "Microsoft.Bot.Schema/4.5.3": {
+    "Microsoft.Bot.Configuration/4.6.0-preview1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9Sa9g+XUfl4uNb/UBMZT9K7NHZSwpm+Dxnimn0vBQ8X/Jk6hjn5s4wI5ovx8x2F/pYmVDH++u1jAajE4ZnEwHA==",
-      "path": "microsoft.bot.schema/4.5.3",
-      "hashPath": "microsoft.bot.schema.4.5.3.nupkg.sha512"
+      "sha512": "sha512-M9iTNmwk5H6VpVejcO9bLGcZcvVrKhK5q+msMHK1AoF4yOEWHUOUWXC5f7VkUe5ovefpAL7y7bz3EW0RfkDcuw==",
+      "path": "microsoft.bot.configuration/4.6.0-preview1",
+      "hashPath": "microsoft.bot.configuration.4.6.0-preview1.nupkg.sha512"
+    },
+    "Microsoft.Bot.Connector/4.6.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kqRtbvWJhwZ6iSAz1CzGY8ub79CiEj+P7TKukZIZGGBRsYtvRIHuYw6nIz7nkjUWNw/W8z7PNE7EpodIeCylzA==",
+      "path": "microsoft.bot.connector/4.6.0-preview1",
+      "hashPath": "microsoft.bot.connector.4.6.0-preview1.nupkg.sha512"
+    },
+    "Microsoft.Bot.Schema/4.6.0-preview1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7SPbIwXWonOQtiN+3txQ88eqLRxmL3KaYzfg2+64oPYSpeX465zsc2+nUqbIC0Jee3ISMuNH5fqVliHDt6Sohg==",
+      "path": "microsoft.bot.schema/4.6.0-preview1",
+      "hashPath": "microsoft.bot.schema.4.6.0-preview1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.6.0": {
       "type": "package",

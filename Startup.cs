@@ -15,17 +15,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
+using Microsoft.Bot.Builder.BotFramework;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using footprints.Bots;
 
 namespace footprints
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostEnvironment env)
         {
             Configuration = configuration;
+            Env = env;
         }
 
         public IConfiguration Configuration { get; }
+        public IHostEnvironment Env { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -42,6 +47,18 @@ namespace footprints
                     ValidateIssuer = false,
                     ValidateAudience = false
                 };
+            });
+
+            var configurationBuilder = new ConfigurationBuilder()
+                .SetBasePath(Env.ContentRootPath)
+                .AddJsonFile("appsettings.json");
+
+            var configuration = configurationBuilder
+                .Build();
+
+            services.AddBot<Footprint>(options =>
+            {
+                options.CredentialProvider = new ConfigurationCredentialProvider(configuration);
             });
         }
 
@@ -60,6 +77,8 @@ namespace footprints
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseBotFramework();
 
             app.UseEndpoints(endpoints =>
             {
