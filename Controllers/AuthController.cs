@@ -68,6 +68,9 @@ namespace footprints.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
+            userFromRepo.PasswordHash = null;
+            userFromRepo.PasswordSalt = null;
+
             return Ok(new { tokenString, userFromRepo });
         }
     }
