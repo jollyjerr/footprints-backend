@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Bot;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Schema;
-// using Microsoft.Bot.Builder.Core.Extensions;
+using Newtonsoft.Json;
 
 namespace footprints.Bots
 {
@@ -14,9 +15,10 @@ namespace footprints.Bots
     {
         public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
         {
-            if (turnContext.Activity.Type == ActivityTypes.Message)
+            if (turnContext.Activity.Type is ActivityTypes.Message)
             {
-                await turnContext.SendActivityAsync($"You said '{turnContext.Activity.Text}'");
+                string input = turnContext.Activity.Text;
+                await turnContext.SendActivityAsync($"SimpleBot: {input}");
             }
         }
     }
