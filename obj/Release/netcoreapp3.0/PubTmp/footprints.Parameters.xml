@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="footprints-backend" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^/Users/JollyJerr/Development/code/projects/mod5/footprints/obj/Release/netcoreapp3\.0/PubTmp/Out/$" />
+  </parameter>
+</parameters>
