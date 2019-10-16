@@ -14,7 +14,7 @@
         "outputPath": "/Users/JollyJerr/Development/code/projects/mod5/footprints/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/JollyJerr/.config/NuGet/NuGet.Config"
+          "/Users/JollyJerr/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -36,6 +36,10 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[2.2.0, )"
