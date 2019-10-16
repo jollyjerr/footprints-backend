@@ -1,18 +1,25 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/DataContextModelSnapshot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/User.cs">
     <Files>
       <File FileName="Controllers/AuthController.cs" Line="10" Column="32" />
-      <File FileName="appsettings.json" Line="6" Column="183" />
-      <File FileName="appsettings.Development.json" Line="7" Column="5" />
-      <File FileName="Migrations/DataContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="appsettings.json" />
+      <File FileName="footprints.csproj" Line="1" Column="1" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="footprints" expanded="True">
             <Node name="footprints" expanded="True">
-              <Node name="Migrations" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="User.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
