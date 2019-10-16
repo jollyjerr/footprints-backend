@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties/launchSettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
-      <File FileName="Startup.cs" Line="47" Column="32" />
+      <File FileName="Startup.cs" Line="73" Column="1" />
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Properties/launchSettings.json" Line="21" Column="32" />
-      <File FileName="appsettings.Development.json" Line="11" Column="31" />
+      <File FileName="Properties/launchSettings.json" Line="30" Column="2" />
+      <File FileName="appsettings.Development.json" Line="16" Column="1" />
       <File FileName="Data/DataContext.cs" Line="1" Column="1" />
       <File FileName="Properties/PublishProfiles/footprints-backend - Web Deploy.pubxml" Line="1" Column="1" />
     </Files>
@@ -21,9 +21,9 @@
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />
-                <Node name="launchSettings.json" selected="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
