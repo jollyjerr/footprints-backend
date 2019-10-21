@@ -24,8 +24,11 @@ namespace footprints
         {
             Configuration = configuration;
         }
+        
+        readonly string AllowLocal = "_AllowLocal";
 
         public IConfiguration Configuration { get; }
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -33,6 +36,17 @@ namespace footprints
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddScoped<IAuthRepository, AuthRepository>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(AllowLocal,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                });
+            });
 
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
@@ -62,6 +76,8 @@ namespace footprints
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors(AllowLocal);
 
             app.UseEndpoints(endpoints =>
             {
