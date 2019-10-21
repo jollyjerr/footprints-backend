@@ -21,4 +21,10 @@
   <ItemGroup>
     <Content Remove="Web.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Dtos\VehicleForRegistrationDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dtos\VehicleForRegisterDto.cs" />
+  </ItemGroup>
 </Project>

@@ -11,18 +11,46 @@ using Microsoft.AspNetCore.Mvc;
 using footprints.Models;
 using footprints.Data;
 using footprints.Dtos;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace footprints.Controllers
 {
-    [Route("api/[controller]")]
+    //[Authorize]
+    [Route("api/[controller]")] //<host>/api/vehicle/register
     public class VehicleController : Controller
     {
         private readonly IVehicleRepository _repo;
         private readonly IConfiguration _config;
-        public VehicleController(IVehicleRepository repo, IConfiguration config)
+        private readonly DataContext _context;
+        public VehicleController(IVehicleRepository repo, IConfiguration config, DataContext context)
         {
             _repo = repo;
             _config = config;
+            _context = context;
+        }
+
+        [HttpPost("register")] //<host>/api/vehicle/register
+        public async Task<IActionResult> Register([FromBody] VehicleForRegisterDto vehicleForRegisterDto)
+        { 
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var user = await _context.Users.FirstOrDefaultAsync(test => test.Id == vehicleForRegisterDto.UserId);
+
+            var vehicleToCreate = new Vehicle
+            {
+                Make = vehicleForRegisterDto.Make,
+                Model = vehicleForRegisterDto.Model,
+                Year = vehicleForRegisterDto.Year,
+                Fuel = vehicleForRegisterDto.Fuel,
+                Mpg = vehicleForRegisterDto.Mpg,
+                User = user
+            };
+
+            var createUser = await _repo.Register(vehicleToCreate);
+
+            return Ok(new { vehicleToCreate });
         }
     }
 }

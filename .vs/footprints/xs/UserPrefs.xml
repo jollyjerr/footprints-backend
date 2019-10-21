@@ -1,12 +1,16 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AuthController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/VehicleController.cs">
     <Files>
-      <File FileName="Controllers/AuthController.cs" Line="23" Column="10" />
-      <File FileName="Controllers/VehicleController.cs" Line="20" Column="9" />
-      <File FileName="Data/IVehicleRepository.cs" Line="7" Column="40" />
+      <File FileName="Controllers/VehicleController.cs" Line="21" Column="46" />
+      <File FileName="Controllers/AuthController.cs" Line="47" Column="1" />
+      <File FileName="Dtos/VehicleForRegistrationDto.cs" Line="14" Column="40" />
+      <File FileName="Data/VehicleRepository.cs" Line="22" Column="10" />
+      <File FileName="Data/AuthRepository.cs" Line="39" Column="9" />
       <File FileName="Data/IAuthRepository.cs" Line="2" Column="1" />
-      <File FileName="Data/AuthRepository.cs" Line="1" Column="1" />
+      <File FileName="Models/Vehicle.cs" Line="9" Column="9" />
+      <File FileName="Controllers/ValuesController.cs" Line="13" Column="5" />
+      <File FileName="Data/IVehicleRepository.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +19,7 @@
             <Node name="footprints" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True">
-                <Node name="AuthController.cs" selected="True" />
+                <Node name="VehicleController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
               <Node name="Dtos" expanded="True" />
