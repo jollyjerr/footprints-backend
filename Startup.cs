@@ -39,6 +39,7 @@ namespace footprints
             services.AddControllers();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IHouseRepository, HouseRepository>();
 
             services.AddCors(options =>
             {

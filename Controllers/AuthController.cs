@@ -74,14 +74,14 @@ namespace footprints.Controllers
             {
                 o.Id,
                 o.Username,
-                Vehicles = o.Vehicles.Select(v => new
+                Vehicles = o.Vehicles.Select(u => new
                 {
-                    v.Id,
-                    v.Make,
-                    v.Model,
-                    v.Mpg,
-                    v.Fuel,
-                    v.Year
+                    u.Id,
+                    u.Make,
+                    u.Model,
+                    u.Mpg,
+                    u.Fuel,
+                    u.Year
                 }).ToList()
             })
                 .First(test => test.Id == userFromRepo.Id );
