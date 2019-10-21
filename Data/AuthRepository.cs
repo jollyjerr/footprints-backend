@@ -15,7 +15,7 @@ namespace footprints.Data
 
         public async Task<User> Login(string username, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(test => test.Username == username);
+            var user = await _context.Users.Include(test => test.Vehicles).FirstOrDefaultAsync(test => test.Username == username);
             if(user == null)
                 return null;
 

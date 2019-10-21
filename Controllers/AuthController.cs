@@ -53,18 +53,7 @@ namespace footprints.Controllers
             var userFromRepo = await _repo.Login(userForRegisterDto.Username.ToLower(), userForRegisterDto.Password);
             if (userFromRepo == null) //User login failed
                 return Unauthorized();
-
-            var userVehicles = new List<Vehicle>();
-
-            var vehicles = _context.Vehicles;
-            foreach(var vehicle in vehicles)
-            {
-                if(vehicle.User == userFromRepo)
-                {
-                    userVehicles.Add(vehicle);
-                }
-            }
-
+            
             //generate token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config.GetSection("AppSettings:Token").Value);
@@ -81,12 +70,10 @@ namespace footprints.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var footprintsJWT = tokenHandler.WriteToken(token);
 
-            Console.WriteLine(userVehicles);
-
             return Ok(new
             {
                 footprintsJWT,
-                userFromRepo.Username,
+                userFromRepo.Vehicles
             });
         }
     }
