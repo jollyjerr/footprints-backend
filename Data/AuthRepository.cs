@@ -48,8 +48,8 @@ namespace footprints.Data
             await _context.Houses.AddAsync(house);
             await _context.SaveChangesAsync();
 
-            user.vehicles.add(vehicle)
-            user.houses.add(house)
+            user.Vehicles.Add(vehicle);
+            user.Houses.Add(house);
 
             await _context.Users.AddAsync(user); // Adding the user to context of users.
             await _context.SaveChangesAsync(); // Save changes to database.

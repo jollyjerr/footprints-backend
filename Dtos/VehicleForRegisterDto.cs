@@ -6,6 +6,11 @@ namespace footprints.Dtos
 {
     public class VehicleForRegisterDto
     {
-        
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public string Fuel { get; set; }
+        public int Mpg { get; set; }
+        public User User { get; set; }
     }
 }

@@ -26,18 +26,24 @@ namespace footprints.Controllers
         }
 
         [HttpPost("register")] //<host>/api/auth/register
-        public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto){ //Data Transfer Object containing username and password.
+        public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto, VehicleForRegisterDto vehicleForRegisterDto, HouseForRegisterDto houseForRegisterDto){ //Data Transfer Object containing username and password.
             // validate request
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            userForRegisterDto.Username = userForRegisterDto.Username.ToLower(); //Convert username to lower case before storing in database.
+            // userForRegisterDto.Username = userForRegisterDto.Username.ToLower(); //Convert username to lower case before storing in database.
 
             if(await _repo.UserExists(userForRegisterDto.Username)) 
                 return BadRequest("Username is already taken");
 
             var userToCreate = new User{
                 Username = userForRegisterDto.Username
+            };
+
+            var vehicleToCreate = new Vehicle{
+                Make = vehicleForRegisterDto.Make
+                Model = vehicleForRegisterDto.Model
+                Year = vehicleForRegisterDto.Year
             };
 
             var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password);

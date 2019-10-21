@@ -7927,7 +7927,7 @@
       "outputPath": "/Users/JollyJerr/Development/code/projects/mod5/footprints/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/JollyJerr/.nuget/NuGet/NuGet.Config"
+        "/Users/JollyJerr/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
