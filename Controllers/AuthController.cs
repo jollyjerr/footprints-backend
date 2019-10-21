@@ -19,10 +19,12 @@ namespace footprints.Controllers
     {
         private readonly IAuthRepository _repo;
         private readonly IConfiguration _config;
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        private readonly DataContext _context;
+        public AuthController(IAuthRepository repo, IConfiguration config, DataContext context)
         {
             _repo = repo;
             _config = config;
+            _context = context;
         }
 
         [HttpPost("register")] //<host>/api/auth/register
@@ -51,7 +53,7 @@ namespace footprints.Controllers
             var userFromRepo = await _repo.Login(userForRegisterDto.Username.ToLower(), userForRegisterDto.Password);
             if (userFromRepo == null) //User login failed
                 return Unauthorized();
-
+            
             //generate token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config.GetSection("AppSettings:Token").Value);
@@ -68,10 +70,27 @@ namespace footprints.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var footprintsJWT = tokenHandler.WriteToken(token);
 
-            return Ok(new { footprintsJWT, 
-            userFromRepo.Username, 
-            userFromRepo.Vehicles, 
-            userFromRepo.Houses });
+            var user = _context.Users.Select(o => new
+            {
+                o.Id,
+                o.Username,
+                Vehicles = o.Vehicles.Select(v => new
+                {
+                    v.Id,
+                    v.Make,
+                    v.Model,
+                    v.Mpg,
+                    v.Fuel,
+                    v.Year
+                }).ToList()
+            })
+                .First(test => test.Id == userFromRepo.Id );
+
+            return Ok(new
+            {
+                footprintsJWT,
+                user
+            });
         }
     }
 }

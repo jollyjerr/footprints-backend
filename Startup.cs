@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Newtonsoft.Json;
 
 namespace footprints
 {
@@ -36,6 +38,7 @@ namespace footprints
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
 
             services.AddCors(options =>
             {
@@ -48,6 +51,22 @@ namespace footprints
                 });
             });
 
+            //services.AddMvc().AddJsonOptions(o =>
+            //{
+            //    o.JsonSerializerOptions.PropertyNamingPolicy = null;
+            //    o.JsonSerializerOptions.DictionaryKeyPolicy = null;
+            //});
+
+            //services.AddControllers()
+            //    .AddNewtonsoftJson();
+
+            //services.AddMvc()
+            //    .AddJsonOptions(
+            //        options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            //);
+
+            services.AddMvc().AddNewtonsoftJson(options => { options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore; });
+
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
                 options.TokenValidationParameters = new TokenValidationParameters{
@@ -58,7 +77,7 @@ namespace footprints
                 };
             });
 
-            // services.BuildServiceProvider().GetService<DataContext>().Database.Migrate();
+            // services.BuildServiceProvider().GetService<DataContext>().Database.Migrate(); //deployment spinup
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

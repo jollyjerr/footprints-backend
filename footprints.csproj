@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -20,5 +21,11 @@
 
   <ItemGroup>
     <Content Remove="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Dtos\VehicleForRegisterDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dtos\VehicleForRegisterDto.cs" />
   </ItemGroup>
 </Project>
