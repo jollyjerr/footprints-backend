@@ -12,7 +12,7 @@ namespace footprints.Models
         public string Username { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-        public ICollection<Vehicle> Vehicles { get; set; } 
-        public ICollection<House> Houses { get; set; }
+        public List<Vehicle> Vehicles { get; set; } 
+        public List<House> Houses { get; set; }
     }
 }
