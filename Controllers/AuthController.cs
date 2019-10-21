@@ -19,10 +19,12 @@ namespace footprints.Controllers
     {
         private readonly IAuthRepository _repo;
         private readonly IConfiguration _config;
-        public AuthController(IAuthRepository repo, IConfiguration config)
+        private readonly DataContext _context;
+        public AuthController(IAuthRepository repo, IConfiguration config, DataContext context)
         {
             _repo = repo;
             _config = config;
+            _context = context;
         }
 
         [HttpPost("register")] //<host>/api/auth/register
@@ -52,6 +54,17 @@ namespace footprints.Controllers
             if (userFromRepo == null) //User login failed
                 return Unauthorized();
 
+            var userVehicles = new List<Vehicle>();
+
+            var vehicles = _context.Vehicles;
+            foreach(var vehicle in vehicles)
+            {
+                if(vehicle.User == userFromRepo)
+                {
+                    userVehicles.Add(vehicle);
+                }
+            }
+
             //generate token
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config.GetSection("AppSettings:Token").Value);
@@ -68,10 +81,13 @@ namespace footprints.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var footprintsJWT = tokenHandler.WriteToken(token);
 
-            return Ok(new { footprintsJWT, 
-            userFromRepo.Username, 
-            userFromRepo.Vehicles, 
-            userFromRepo.Houses });
+            Console.WriteLine(userVehicles);
+
+            return Ok(new
+            {
+                footprintsJWT,
+                userFromRepo.Username,
+            });
         }
     }
 }

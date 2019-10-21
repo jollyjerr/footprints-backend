@@ -36,6 +36,7 @@ namespace footprints
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
 
             services.AddCors(options =>
             {

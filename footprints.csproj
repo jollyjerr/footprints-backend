@@ -22,7 +22,7 @@
     <Content Remove="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Dtos\VehicleForRegistrationDto.cs" />
+    <Compile Remove="Dtos\VehicleForRegisterDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dtos\VehicleForRegisterDto.cs" />

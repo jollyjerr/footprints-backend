@@ -48,9 +48,9 @@ namespace footprints.Controllers
                 User = user
             };
 
-            var createUser = await _repo.Register(vehicleToCreate);
+            var createVehicle = await _repo.Register(vehicleToCreate);
 
-            return Ok(new { vehicleToCreate });
+            return Ok();
         }
     }
 }
