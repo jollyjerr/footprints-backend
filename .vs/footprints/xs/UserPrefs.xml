@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/AuthRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AuthController.cs">
     <Files>
       <File FileName="Controllers/VehicleController.cs" Line="25" Column="9" />
       <File FileName="Data/VehicleRepository.cs" Line="25" Column="1" />
-      <File FileName="Controllers/AuthController.cs" Line="77" Column="38" />
+      <File FileName="Controllers/AuthController.cs" Line="76" Column="38" />
       <File FileName="Data/IAuthRepository.cs" Line="2" Column="1" />
-      <File FileName="Models/Vehicle.cs" Line="14" Column="39" />
       <File FileName="Controllers/ValuesController.cs" Line="13" Column="5" />
       <File FileName="Data/IVehicleRepository.cs" Line="12" Column="1" />
-      <File FileName="Startup.cs" Line="39" Column="73" />
+      <File FileName="Startup.cs" Line="80" Column="113" />
       <File FileName="Models/User.cs" Line="15" Column="37" />
       <File FileName="Migrations/DataContextModelSnapshot.cs" Line="112" Column="47" />
-      <File FileName="Data/AuthRepository.cs" Line="1" Column="1" />
+      <File FileName="Data/AuthRepository.cs" Line="18" Column="74" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,10 +19,10 @@
           <Node name="footprints" expanded="True">
             <Node name="footprints" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="AuthRepository.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AuthController.cs" selected="True" />
               </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Dtos" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />

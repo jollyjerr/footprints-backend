@@ -70,10 +70,26 @@ namespace footprints.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var footprintsJWT = tokenHandler.WriteToken(token);
 
+            var user = _context.Users.Select(o => new
+            {
+                o.Id,
+                o.Username,
+                Vehicles = o.Vehicles.Select(v => new
+                {
+                    v.Id,
+                    v.Make,
+                    v.Model,
+                    v.Mpg,
+                    v.Fuel,
+                    v.Year
+                }).ToList()
+            })
+                .First(test => test.Id == userFromRepo.Id );
+
             return Ok(new
             {
                 footprintsJWT,
-                userFromRepo.Vehicles
+                user
             });
         }
     }

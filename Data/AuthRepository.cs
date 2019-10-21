@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using footprints.Models;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +16,14 @@ namespace footprints.Data
 
         public async Task<User> Login(string username, string password)
         {
-            var user = await _context.Users.Include(test => test.Vehicles).FirstOrDefaultAsync(test => test.Username == username);
+            var user = await _context.Users.FirstOrDefaultAsync(test => test.Username == username);
+
             if(user == null)
                 return null;
 
             if(!VerifyPassword(password, user.PasswordHash, user.PasswordSalt))
                 return null;
+
 
             return user;
         }
