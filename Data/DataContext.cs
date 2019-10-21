@@ -9,7 +9,7 @@ namespace footprints.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) {}
         public DbSet<Value> Values { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Vehicle> Vehicle { get; set; }
-        public DbSet<House> House { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
+        public DbSet<House> Houses { get; set; }
     }
 }
