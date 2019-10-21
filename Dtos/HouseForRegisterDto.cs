@@ -4,7 +4,7 @@ using footprints.Models;
 
 namespace footprints.Dtos
 {
-    public class VehicleForRegisterDto
+    public class HouseForRegisterDto
     {
         
     }
