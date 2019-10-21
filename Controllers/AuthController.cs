@@ -82,6 +82,15 @@ namespace footprints.Controllers
                     u.Mpg,
                     u.Fuel,
                     u.Year
+                }).ToList(),
+                Houses = o.Houses.Select(h => new
+                {
+                    h.Location,
+                    h.SquareFootage,
+                    h.Food,
+                    h.Solar,
+                    h.Wind,
+                    h.Geothermal
                 }).ToList()
             })
                 .First(test => test.Id == userFromRepo.Id );
