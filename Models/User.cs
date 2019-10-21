@@ -13,5 +13,6 @@ namespace footprints.Models
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
         public ICollection<Vehicle> Vehicles { get; set; } 
+        public ICollection<House> House { get; set; }
     }
 }

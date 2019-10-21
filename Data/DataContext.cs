@@ -10,5 +10,6 @@ namespace footprints.Data
         public DbSet<Value> Values { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
+        public DbSet<House> House { get; set; }
     }
 }
