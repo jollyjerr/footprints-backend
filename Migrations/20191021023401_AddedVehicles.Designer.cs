@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using footprints.Data;
 
 namespace footprints.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20191021023401_AddedVehicles")]
+    partial class AddedVehicles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,24 +76,12 @@ namespace footprints.Migrations
                     b.Property<int>("Mpg")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Year")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Vehicle");
-                });
-
-            modelBuilder.Entity("footprints.Models.Vehicle", b =>
-                {
-                    b.HasOne("footprints.Models.User", "User")
-                        .WithMany("Vehicles")
-                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }
