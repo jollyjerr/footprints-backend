@@ -1,25 +1,23 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AuthController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="Controllers/VehicleController.cs" Line="57" Column="1" />
       <File FileName="Controllers/AuthController.cs" Line="96" Column="2" />
-      <File FileName="Data/AuthRepository.cs" Line="72" Column="2" />
-      <File FileName="Data/IAuthRepository.cs" Line="10" Column="60" />
-      <File FileName="Controllers/ValuesController.cs" Line="13" Column="5" />
-      <File FileName="Startup.cs" Line="108" Column="1" />
-      <File FileName="Models/User.cs" Line="15" Column="37" />
-      <File FileName="Migrations/DataContextModelSnapshot.cs" Line="112" Column="47" />
+      <File FileName="Data/AuthRepository.cs" />
+      <File FileName="Data/IAuthRepository.cs" />
+      <File FileName="Controllers/ValuesController.cs" />
+      <File FileName="Startup.cs" Line="93" Column="1" />
+      <File FileName="Models/User.cs" />
+      <File FileName="Migrations/DataContextModelSnapshot.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="footprints" expanded="True">
-            <Node name="footprints" expanded="True">
+            <Node name="footprints" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="AuthController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Dtos" expanded="True" />
               <Node name="Migrations" expanded="True" />
