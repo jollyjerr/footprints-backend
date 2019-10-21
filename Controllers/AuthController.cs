@@ -26,7 +26,7 @@ namespace footprints.Controllers
         }
 
         [HttpPost("register")] //<host>/api/auth/register
-        public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto, VehicleForRegisterDto vehicleForRegisterDto, HouseForRegisterDto houseForRegisterDto){ //Data Transfer Object containing username and password.
+        public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto){ //Data Transfer Object containing username and password.
             // validate request
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);

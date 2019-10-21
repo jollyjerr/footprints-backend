@@ -11,5 +11,7 @@ namespace footprints.Dtos
         public int Year { get; set; }
         public string Fuel { get; set; }
         public int Mpg { get; set; }
+        public List<Vehicle> Vehicles { get; set; }
+        public List<House> Houses { get; set; }
     }
 }
