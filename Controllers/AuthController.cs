@@ -36,17 +36,31 @@ namespace footprints.Controllers
             if(await _repo.UserExists(userForRegisterDto.Username)) 
                 return BadRequest("Username is already taken");
 
-            var userToCreate = new User{
+            var userToCreate = new User
+            {
                 Username = userForRegisterDto.Username
             };
 
-            var vehicleToCreate = new Vehicle{
-                Make = vehicleForRegisterDto.Make
-                Model = vehicleForRegisterDto.Model
-                Year = vehicleForRegisterDto.Year
+            var vehicleToCreate = new Vehicle
+            {
+                Make = vehicleForRegisterDto.Make,
+                Model = vehicleForRegisterDto.Model,
+                Year = vehicleForRegisterDto.Year,
+                Fuel = vehicleForRegisterDto.Fuel,
+                Mpg = vehicleForRegisterDto.Mpg
             };
 
-            var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
+            var houseToCreate = new House
+            {
+                Location = houseForRegisterDto.Location,
+                SquareFootage = houseForRegisterDto.SquareFootage,
+                Food = houseForRegisterDto.Food,
+                Solar = houseForRegisterDto.Solar,
+                Wind = houseForRegisterDto.Wind,
+                Geothermal = houseForRegisterDto.Geothermal
+            };
+
+            var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password, vehicleToCreate, houseToCreate);
 
             return Ok(new {userToCreate});
         }

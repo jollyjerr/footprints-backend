@@ -12,6 +12,5 @@ namespace footprints.Dtos
         public bool Solar { get; set; }
         public bool Wind { get; set; }
         public bool Geothermal { get; set; }
-        public User User { get; set; }
     }
 }
