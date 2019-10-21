@@ -36,7 +36,7 @@ namespace footprints.Data
             return true;
         }
 
-        public async Task<User> Register(User user, string password, Vehicle vehicle, House house)
+        public async Task<User> Register(User user, string password)
         {
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(password, out passwordHash, out passwordSalt);
@@ -44,15 +44,10 @@ namespace footprints.Data
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
 
-            await _context.Vehicles.AddAsync(vehicle);
-            await _context.Houses.AddAsync(house);
-            await _context.SaveChangesAsync();
-
-            user.Vehicles.Add(vehicle);
-            user.Houses.Add(house);
-
             await _context.Users.AddAsync(user); // Adding the user to context of users.
-            await _context.SaveChangesAsync(); // Save changes to database.
+            Console.WriteLine("username" + user.Username);
+            Console.WriteLine("vehicles" + user.Vehicles);
+            //await _context.SaveChangesAsync(); // Save changes to database.
 
             return user;
         }

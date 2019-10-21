@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{54F572B3-F43B-42A1-82D3-306C08D4BB75}|Default">
   <MonoDevelop.Ide.ItemProperties.footprints PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Dtos/VehicleForRegisterDto.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/AuthRepository.cs">
     <Files>
-      <File FileName="Controllers/AuthController.cs" Line="29" Column="99" />
-      <File FileName="Data/AuthRepository.cs" Line="55" Column="76" />
-      <File FileName="Dtos/HouseForRegisterDto.cs" Line="1" Column="1" />
-      <File FileName="Data/IAuthRepository.cs" Line="8" Column="6" />
-      <File FileName="Controllers/ValuesController.cs" Line="1" Column="1" />
-      <File FileName="Dtos/UserForLoginDto.cs" Line="1" Column="1" />
+      <File FileName="Controllers/AuthController.cs" Line="54" Column="16" />
+      <File FileName="Dtos/UserForRegisterDto.cs" Line="3" Column="34" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
+      <File FileName="Data/IAuthRepository.cs" Line="11" Column="63" />
       <File FileName="Data/DataContext.cs" Line="1" Column="1" />
-      <File FileName="Dtos/VehicleForRegisterDto.cs" Line="1" Column="1" />
+      <File FileName="Data/AuthRepository.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,10 +16,10 @@
             <Node name="footprints" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True" />
-              <Node name="Dtos" expanded="True">
-                <Node name="VehicleForRegisterDto.cs" selected="True" />
+              <Node name="Data" expanded="True">
+                <Node name="AuthRepository.cs" selected="True" />
               </Node>
+              <Node name="Dtos" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True">
                 <Node name="PublishProfiles" expanded="True" />

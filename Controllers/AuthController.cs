@@ -41,26 +41,26 @@ namespace footprints.Controllers
                 Username = userForRegisterDto.Username
             };
 
-            var vehicleToCreate = new Vehicle
-            {
-                Make = vehicleForRegisterDto.Make,
-                Model = vehicleForRegisterDto.Model,
-                Year = vehicleForRegisterDto.Year,
-                Fuel = vehicleForRegisterDto.Fuel,
-                Mpg = vehicleForRegisterDto.Mpg
-            };
+            //var vehicleToCreate = new Vehicle
+            //{
+            //    Make = vehicleForRegisterDto.Make,
+            //    Model = vehicleForRegisterDto.Model,
+            //    Year = vehicleForRegisterDto.Year,
+            //    Fuel = vehicleForRegisterDto.Fuel,
+            //    Mpg = vehicleForRegisterDto.Mpg
+            //};
 
-            var houseToCreate = new House
-            {
-                Location = houseForRegisterDto.Location,
-                SquareFootage = houseForRegisterDto.SquareFootage,
-                Food = houseForRegisterDto.Food,
-                Solar = houseForRegisterDto.Solar,
-                Wind = houseForRegisterDto.Wind,
-                Geothermal = houseForRegisterDto.Geothermal
-            };
+            //var houseToCreate = new House
+            //{
+            //    Location = houseForRegisterDto.Location,
+            //    SquareFootage = houseForRegisterDto.SquareFootage,
+            //    Food = houseForRegisterDto.Food,
+            //    Solar = houseForRegisterDto.Solar,
+            //    Wind = houseForRegisterDto.Wind,
+            //    Geothermal = houseForRegisterDto.Geothermal
+            //};
 
-            var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password, vehicleToCreate, houseToCreate);
+            var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
 
             return Ok(new {userToCreate});
         }

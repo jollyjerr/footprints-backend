@@ -8,6 +8,6 @@ namespace footprints.Data
     {
         Task<User> Login(string username, string password);
         Task<bool> UserExists(string username);
-        Task<User> Register(User userToCreate, string password, Vehicle vehicleToCreate, House houseToCreate);
+        Task<User> Register(User userToCreate, string password);
     }
 }
