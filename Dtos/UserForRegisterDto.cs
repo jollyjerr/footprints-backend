@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using footprints.Models;
 
 namespace footprints.Dtos
 {
@@ -11,5 +12,7 @@ namespace footprints.Dtos
         [Required]
         [StringLength(30, MinimumLength =4, ErrorMessage = "You must specify a password between 4 and 30 characters.")]
         public string Password { get; set; }
+
+
     }
 }

@@ -66,12 +66,12 @@ namespace footprints.Controllers
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            var tokenString = tokenHandler.WriteToken(token);
+            var footprintsJWT = tokenHandler.WriteToken(token);
 
-            userFromRepo.PasswordHash = null;
-            userFromRepo.PasswordSalt = null;
-
-            return Ok(new { tokenString, userFromRepo });
+            return Ok(new { footprintsJWT, 
+            userFromRepo.Username, 
+            userFromRepo.Vehicles, 
+            userFromRepo.Houses });
         }
     }
 }
