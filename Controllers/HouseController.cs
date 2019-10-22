@@ -51,7 +51,7 @@ namespace footprints.Controllers
 
             var createHouse = await _repo.Register(houseToCreate);
 
-            return Ok();
+            return Ok(new {createHouse});
         }
     }
 }
