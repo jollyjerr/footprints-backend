@@ -50,7 +50,7 @@ namespace footprints.Controllers
 
             var createVehicle = await _repo.Register(vehicleToCreate);
 
-            return Ok(new {createVehicle});
+            return Ok(new {createVehicle.Make, createVehicle.Model});
         }
     }
 }

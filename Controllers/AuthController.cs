@@ -44,7 +44,7 @@ namespace footprints.Controllers
 
             var createUser = await _repo.Register(userToCreate, userForRegisterDto.Password);
 
-            return Ok(new {userToCreate});
+            return Ok(new {userToCreate.Id});
         }
 
         [HttpPost("login")]
