@@ -7,7 +7,7 @@
       <File FileName="Data/AuthRepository.cs" />
       <File FileName="Data/IAuthRepository.cs" />
       <File FileName="Controllers/ValuesController.cs" />
-      <File FileName="Startup.cs" Line="84" Column="107" />
+      <File FileName="Startup.cs" Line="84" Column="19" />
       <File FileName="Models/User.cs" />
       <File FileName="Migrations/DataContextModelSnapshot.cs" />
     </Files>
