@@ -43,15 +43,15 @@ namespace footprints
 
             services.AddCors(options =>
             {
-                options.AddPolicy(Allowed,
+                options.AddPolicy(AllowLocal,
                 builder =>
                 {
                     builder.WithOrigins("http://localhost:3000",
                                         "https://footprintthebot.web.app",
-                                        "https://footprintthebot.firebaseapp.com"
-                                        "https://footprint2001.azurewebsites.net"
-                                        "https://footprint2001.azurewebsites.net/api"
-                                        "https://footprint2001.azurewebsites.net/api/"
+                                        "https://footprintthebot.firebaseapp.com",
+                                        "https://footprint2001.azurewebsites.net",
+                                        "https://footprint2001.azurewebsites.net/api",
+                                        "https://footprint2001.azurewebsites.net/api/",
                                         "https://footprint2001.azurewebsites.net/api/messages")
                                             .AllowAnyHeader()
                                             .AllowAnyMethod();
@@ -103,7 +103,7 @@ namespace footprints
 
             app.UseAuthorization();
 
-            app.UseCors(Allowed);
+            app.UseCors(AllowLocal);
 
             app.UseEndpoints(endpoints =>
             {
