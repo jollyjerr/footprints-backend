@@ -3,11 +3,11 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="Controllers/VehicleController.cs" Line="57" Column="1" />
-      <File FileName="Controllers/AuthController.cs" Line="96" Column="2" />
+      <File FileName="Controllers/AuthController.cs" />
       <File FileName="Data/AuthRepository.cs" />
       <File FileName="Data/IAuthRepository.cs" />
       <File FileName="Controllers/ValuesController.cs" />
-      <File FileName="Startup.cs" Line="93" Column="1" />
+      <File FileName="Startup.cs" Line="84" Column="107" />
       <File FileName="Models/User.cs" />
       <File FileName="Migrations/DataContextModelSnapshot.cs" />
     </Files>

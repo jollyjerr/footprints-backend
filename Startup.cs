@@ -78,7 +78,7 @@ namespace footprints
                 };
             });
 
-            //services.BuildServiceProvider().GetService<DataContext>().Database.Migrate(); //deployment spinup
+            services.BuildServiceProvider().GetService<DataContext>().Database.Migrate(); //deployment spinup
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
